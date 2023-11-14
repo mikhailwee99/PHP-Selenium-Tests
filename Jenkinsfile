@@ -6,9 +6,7 @@ pipeline {
 				stage('Deploy') {
 					agent any
 					steps {
-						sh "cd home"
-						sh "chmod -R ./php-selenium-tests/src"
-						sh "cd php-selenium-tests"
+						sh "ls"
 						sh "chmod +x ./jenkins/scripts/deploy.sh"
 						sh "chmod +x ./jenkins/scripts/kill.sh"
 						sh './jenkins/scripts/deploy.sh'
